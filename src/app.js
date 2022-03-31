@@ -51,9 +51,9 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/about', (req,res) => {
-    res.render('about', {
+    res.render('about', { 
         title: 'About Us!',
-        name: 'Selvi'
+        name: 'Selvi S'
     })
 })
 app.get('/weather', (req, res) => {
