@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geoCodeSearch = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const port = process.env.port
 
 const app = express()
 const publicPath = path.join(__dirname, '../public')
@@ -119,6 +120,6 @@ app.get('*', (req, res) => {
         errorMessage: 'Page not found'
     })
 })
-app.listen(3000,() => {
-    console.log('Server listening at port 3000')
+app.listen(port, () => {
+    console.log('Server listening at port ' + port)
 })
